@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <title>{% block title %}Polls Details{% endblock %}</title>
+    <title>{{ poll_details_title }}</title>
     <meta charset="utf-8">
     <body>
         <div id="polls-details">
         </div>
+        <script>
+            window.polls = {
+                polls_details: %%polls_details_json|safe%%
+            }
+        </script>
+        <script src="/static/js/polls/common.bundle.js"></script>
+        <script src="/static/js/polls/polls_details.bundle.js"></script>
     </body>
 </html>

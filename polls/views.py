@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import View
 
 from polls.models import Poll
-from polls.serializers import PollsListSerializer
+from polls.serializers import PollsListSerializer, PollsDetailsSerializer
 
 # Create your views here.
 
@@ -21,4 +21,9 @@ class PollsDetails(View):
 
     def get(self, request, poll_id=None):
         context = {}
+        if poll_id:
+            polls_details_serializer = PollsDetailsSerializer(
+                Poll.objects.get(pk=poll_id))
+            context = {"polls_details_json": json.dumps(
+                polls_details_serializer.data)}
         return render(request, "polls/details.html.j2", context)

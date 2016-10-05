@@ -1,6 +1,6 @@
 from django.urls import reverse
 from rest_framework import serializers
-from polls.models import Poll
+from polls.models import Poll, Question
 
 
 class PollsListSerializer(serializers.ModelSerializer):
@@ -13,3 +13,19 @@ class PollsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Poll
         fields = ('id', 'title', 'poll_url')
+
+
+class QuestionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Question
+        fields = ('title', 'internal_note')
+
+
+class PollsDetailsSerializer(serializers.ModelSerializer):
+
+    questions = QuestionSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Poll
+        fields = ('id', 'title', 'description', 'questions')

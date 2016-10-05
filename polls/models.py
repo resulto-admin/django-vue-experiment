@@ -13,4 +13,4 @@ class Question(models.Model):
 
     title = models.CharField(max_length=250)
     internal_note = models.TextField(blank=True)
-    poll = models.ForeignKey(Poll)
+    poll = models.ForeignKey(Poll, related_name="questions")
