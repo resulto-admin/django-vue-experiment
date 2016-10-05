@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "model": "polls.Poll",
+        "fields": {
+            "title": "About Colors",
+            "description": "A poll about colors you like and dislike."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "polls.Poll",
+        "fields": {
+            "title": "About Cities",
+            "description": ""
+        }
+    },
+    {
+        "pk": 1,
+        "model": "polls.Question",
+        "fields": {
+            "title": "What is your favorite color?",
+            "poll": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "polls.Question",
+        "fields": {
+            "title": "Which color do you dislike the most?",
+            "poll": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "polls.Question",
+        "fields": {
+            "title": "What is your favorite city?",
+            "poll": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "polls.Question",
+        "fields": {
+            "title": "Which city do you dislike the most?",
+            "poll": 1
+        }
+    }
+]

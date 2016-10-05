@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <title>{% block title %}Polls List{% endblock %}</title>
+    <meta charset="utf-8">
+    <body>
+        <div id="polls-list">
+        </div>
+        <script>
+            window.polls = {
+                polls_list: "{{polls_list_json}}"
+            }
+        </script>
+    </body>
+</html>
