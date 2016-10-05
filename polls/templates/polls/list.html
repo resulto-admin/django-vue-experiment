@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <body>
         <div id="polls-list">
+            <ul>
+                <vs-poll-list-item v-for="(poll, index) in polls_list" :poll="poll"></vs-poll-list-item>
+            </ul>
         </div>
         <script>
             window.polls = {
-                polls_list: "{{polls_list_json}}"
+                polls_list: {{polls_list_json|safe}}
             }
         </script>
+        <script src="/static/js/polls/common.bundle.js"></script>
+        <script src="/static/js/polls/polls_list.bundle.js"></script>
     </body>
 </html>

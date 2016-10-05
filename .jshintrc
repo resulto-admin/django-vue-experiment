@@ -1,0 +1,7 @@
+{
+    "undef": true,
+    "unused": true,
+    "predef": ["require", "console", "module", "window"],
+    "quotmark": "single",
+    "esversion": 6
+}
