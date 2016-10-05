@@ -14,11 +14,11 @@ class PollsList(View):
         context = {}
         polls_serializer = PollsListSerializer(Poll.objects.all(), many=True)
         context = {"polls_list_json": json.dumps(polls_serializer.data)}
-        return render(request, "polls/list.html", context)
+        return render(request, "polls/list.html.j2", context)
 
 
 class PollsDetails(View):
 
     def get(self, request, poll_id=None):
         context = {}
-        return render(request, "polls/details.html", context)
+        return render(request, "polls/details.html.j2", context)
