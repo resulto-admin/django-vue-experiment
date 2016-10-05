@@ -12,6 +12,7 @@ var SASS_PATH = './*/static/style/*/*.scss';
 
 var JS_PATH = [
     './*/static/js/**/*.js',
+    './*/static/js/**/*.html',
 ];
 
 var SASS_DEPENDANCIES = [

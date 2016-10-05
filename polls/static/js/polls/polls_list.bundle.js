@@ -6,7 +6,7 @@ webpackJsonp([2],[
 
 	var Vue = __webpack_require__(1);
 
-	var pollListItem = __webpack_require__(2);
+	var pollListItem = __webpack_require__(6);
 
 	new Vue({
 	    el: '#polls-list',
@@ -18,12 +18,16 @@ webpackJsonp([2],[
 
 /***/ },
 /* 1 */,
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var template = __webpack_require__(3);
+	var template = __webpack_require__(7);
 
 	var component = {
 	    template: template,
@@ -33,7 +37,7 @@ webpackJsonp([2],[
 	module.exports = component;
 
 /***/ },
-/* 3 */
+/* 7 */
 /***/ function(module, exports) {
 
 	module.exports = "<li>\n    <a :href=\"poll.poll_url\">{{poll.title}}</a>\n</li>\n";

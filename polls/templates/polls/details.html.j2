@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <body>
         <div id="polls-details">
+            <vs-poll-form :poll="polls_details" :poll_form="polls_form" :question_formset="questions_formset"></vs-poll-form>
         </div>
         <script>
             window.polls = {
-                polls_details: %%polls_details_json|safe%%
+                polls_details: %%polls_details_json|safe%%,
+                polls_form: %%polls_form_json|safe%%,
+                questions_formset: %%questions_formset_json|safe%%,
             }
         </script>
         <script src="/static/js/polls/common.bundle.js"></script>

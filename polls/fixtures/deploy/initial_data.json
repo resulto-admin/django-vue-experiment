@@ -36,7 +36,7 @@
         "model": "polls.Question",
         "fields": {
             "title": "What is your favorite city?",
-            "poll": 1
+            "poll": 2
         }
     },
     {

@@ -1,5 +1,15 @@
 var Vue = require('vue');
 
+var pollForm = require('polls/components/polls_form');
+
+new Vue({
+    el: '#polls-details',
+    data: window.polls,
+    components: {
+        'vs-poll-form': pollForm,
+    },
+});
+
 new Vue({
     el: 'title',
     data: window.polls,

@@ -1,0 +1,9 @@
+<div>
+    <div v-show="!isDeleted">
+        {{question_formset.extra_form.fields.title.label}}<br>
+        <input :name="namify('title')" :id="idfy('title')" v-model="question.title"><br>
+        <input type="hidden" :name="namify('DELETE')" :id="idfy('DELETE')" :value="isDeleted ? 'on' : ''">
+        <button type="button" v-on:click="isDeleted = true">Delete</button>
+    </div>
+    <button v-show="isDeleted" type="button" v-on:click="isDeleted = false">Undo</button>
+</div>
