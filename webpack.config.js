@@ -18,6 +18,7 @@ module.exports = {
     entry: {
         'polls/static/js/polls/polls_list': './polls/static/js/polls/polls_list',
         'polls/static/js/polls/polls_details': './polls/static/js/polls/polls_details',
+        'polls/static/js/polls/polls_table': './polls/static/js/polls/polls_table',
         'common': ['vue']
     },
     output: {

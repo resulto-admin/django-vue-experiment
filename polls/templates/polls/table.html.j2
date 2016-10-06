@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><% block title %>Polls List<% endblock %></title>
+        <meta charset="utf-8">
+        <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+        <style>
+            .table-wrapper {
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DataTable Example</h1>
+        <p>Use the browser's console to change window.data.table_data and see the result :-)</p>
+        <div id="polls-table">
+            <div class="table-wrapper">
+            <vs-datatable :table_data2="table_data"></vs-datatable>
+            </div>
+        </div>
+        <script>
+            window.data = {
+                table_data: %%data|safe%%
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script src="/static/js/polls/common.bundle.js"></script>
+        <script src="/static/js/polls/polls_table.bundle.js"></script>
+    </body>
+</html>

@@ -20,6 +20,30 @@ class PollsList(View):
         return render(request, "polls/list.html.j2", context)
 
 
+class PollsTable(View):
+
+    def get(self, request):
+        context = {}
+        data = [
+            {
+                "name": "Bob Morane",
+                "salary": {
+                    "value": 123.45,
+                    "label": "123,45"
+                }
+            },
+            {
+                "name": "Bouboule la Poule",
+                "salary": {
+                    "value": 432.22,
+                    "label": "432,22"
+                }
+            },
+        ]
+        context = {"data": json.dumps(data)}
+        return render(request, "polls/table.html.j2", context)
+
+
 class PollsDetails(View):
 
     def get(self, request, poll_id=None):
