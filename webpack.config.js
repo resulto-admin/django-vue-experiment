@@ -19,6 +19,7 @@ module.exports = {
         'polls/static/js/polls/polls_list': './polls/static/js/polls/polls_list',
         'polls/static/js/polls/polls_details': './polls/static/js/polls/polls_details',
         'polls/static/js/polls/polls_table': './polls/static/js/polls/polls_table',
+        'polls/static/js/polls/polls_table2': './polls/static/js/polls/polls_table2',
         'common': ['vue']
     },
     output: {
@@ -36,7 +37,16 @@ module.exports = {
                 exclude: /(node_modules\/(vue\/)|bower_components)/,
                 loader: 'babel', // 'babel-loader' is also a valid name to reference
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015'],
+                    plugins: ['transform-vue-jsx']
+                }
+            },
+            {
+                test: /\.jsx$/,
+                loader: 'babel', // 'babel-loader' is also a valid name to reference
+                query: {
+                    presets: ['es2015'],
+                    plugins: ['transform-vue-jsx']
                 }
             },
             {

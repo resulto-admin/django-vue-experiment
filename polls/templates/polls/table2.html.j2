@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><% block title %>Table<% endblock %></title>
+        <title><% block title %>Table 2<% endblock %></title>
         <meta charset="utf-8">
         <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
         <style>
@@ -11,21 +11,20 @@
         </style>
     </head>
     <body>
-        <h1>DataTable Example</h1>
+        <h1>vue-tables-2 Example</h1>
         <p>Use the browser's console to change window.data.table_data and see the result :-)</p>
-        <div id="polls-table">
+        <div id="polls-table2">
             <div class="table-wrapper">
-            <vs-datatable :table_data2="table_data"></vs-datatable>
+                <v-client-table :data="table_data" :columns="table_columns"></v-client-table>
             </div>
         </div>
         <script>
             window.data = {
-                table_data: %%data|safe%%
+                table_data: %%table_data|safe%%,
+                table_columns: %%table_columns|safe%%
             }
         </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
         <script src="/static/js/polls/common.bundle.js"></script>
-        <script src="/static/js/polls/polls_table.bundle.js"></script>
+        <script src="/static/js/polls/polls_table2.bundle.js"></script>
     </body>
 </html>

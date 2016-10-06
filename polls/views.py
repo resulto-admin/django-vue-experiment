@@ -44,6 +44,28 @@ class PollsTable(View):
         return render(request, "polls/table.html.j2", context)
 
 
+class PollsTable2(View):
+
+    def get(self, request):
+        context = {}
+        data = []
+        for i in range(1000):
+            data.append({
+                "name": "Bob Morane {0}".format(i),
+                "simple_salary": 123.45,
+                "salary": {
+                    "value": 123.45,
+                    "label": "123,45"
+                }
+            })
+        columns = ["name", "simple_salary"]
+        context = {
+            "table_data": json.dumps(data),
+            "table_columns": json.dumps(columns)
+        }
+        return render(request, "polls/table2.html.j2", context)
+
+
 class PollsDetails(View):
 
     def get(self, request, poll_id=None):
